@@ -1,0 +1,11 @@
+.service{
+    width: 450px;
+    height: 450px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box
+
+}
