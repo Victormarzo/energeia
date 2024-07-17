@@ -6,7 +6,7 @@ const ServiceList = ({ servicos }) => {
         <section className='list'>
             {
                 servicos.map(servico =>
-                    <Service nome={servico.nome} icone={servico.icone}></Service>)
+                    <Service key={servico.nome} nome={servico.nome} icone={servico.icone}></Service>)
             }
         </section>
 
