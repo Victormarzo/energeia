@@ -1,10 +1,19 @@
-.caroseul{
-    background-color:lightblue;
-    padding: 20px;
+.caroseul {
+    margin-left: 0px;
+    box-sizing: border-box;
 }
 
+.container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px;
 
-.caroseul img{
+}
+
+.caroseul img {
     width: 450px;
     height: 450px;
+
 }

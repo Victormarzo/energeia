@@ -1,3 +1,5 @@
+import Carousel from 'react-multi-carousel';
+import CarouselComponent from './components/CaroseulComponent'
 import './App.css'
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
@@ -7,13 +9,9 @@ import {
   Routes,
   Route  
 } from 'react-router-dom';
-
-
-
-
+ 
 function App() {
  
-
   const images = [
     "/images/image1.jpg",
     "/images/image2.jpg",
@@ -31,19 +29,18 @@ function App() {
     "/images/image14.jpg"
   ]
 
-  //<CarouselComponent type={'image'} list={images}/>
   //<CarouselComponent list={servicos[1]} />
+  //<CarouselComponent type={'image'} list={images}/>
+
   return (
     <div className='app'>
       <div className='content'>
         <Router>
           <Routes>
-            
             <Route path="/" element={<Home/>}/>
-            <Route path="/servico" element={<ServicePage/>}/>
+            <Route path="/:servico" element={<ServicePage/>}/>
           </Routes>
         </Router>
-
       </div >
       <Sidebar />
     </div>

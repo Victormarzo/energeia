@@ -1,7 +1,15 @@
 import "./service.css"
-const Service = ({ icone, nome }) => {
+import { useNavigate } from "react-router-dom";
+
+
+const Service = ({ icone, nome, params, itens }) => {
+    const navigate=  useNavigate()
+    function sayY(y){
+        console.log(y)
+        navigate(`/:${params}`, { state: {nome,itens} })
+    }
     return (
-        <div className="servico">
+        <div onClick={()=>sayY({params})} className="servico">
             <div className="icone">
                 {icone}
             </div>

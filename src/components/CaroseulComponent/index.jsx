@@ -4,6 +4,7 @@ import "./caroseul-component.css"
 import ServiceCaroseul from "../ServiceCaroseul";
 
 const CarouselComponent = ({ type, list }) => {
+    console.log(list)
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -24,28 +25,24 @@ const CarouselComponent = ({ type, list }) => {
     };
 
     return (
-
-        <Carousel
-            className="caroseul"
-            arrows
-            centerMode={false}
-            infinite
-            pauseOnHover
-            responsive={responsive}
-            showDots
-            sliderClass=""
-            slidesToSlide={1}
-
-        >
-            {type ? (
-                list.map(image =>
-                    <img src={image}></img>
+        <div className="container">
+            <Carousel
+                className="caroseul"
+                arrows
+                infinite
+                responsive={responsive}
+                showDots
+                sliderClass=""
+                slidesToSlide={1}
+                renderDotsOutside
+            >
+                {type ? (
+                    list.map(image =>
+                        <img src={image}></img>
+                    )
                 )
-            )
-                :
-                (
-                    
-                    list.itens.map(
+                    :
+                    (list.map(
                         service =>
                             <ServiceCaroseul
                                 descricao={service.descricao}
@@ -53,12 +50,10 @@ const CarouselComponent = ({ type, list }) => {
 
                             ></ServiceCaroseul>
                     )
-
-                )}
-
-
-
-        </Carousel>)
+                    )}
+            </Carousel>
+        </div>
+    )
 }
 
 export default CarouselComponent
