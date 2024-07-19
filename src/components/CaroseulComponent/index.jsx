@@ -1,59 +1,69 @@
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css";
-import "./caroseul-component.css"
-import ServiceCaroseul from "../ServiceCaroseul";
+import React, { useState } from "react";
+import  "./caroseul-component.css";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-const CarouselComponent = ({ type, list }) => {
-    console.log(list)
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
+
+import ServiceCard from "../ServiceCard";
+
+const CarouselComponent = ({ data,type }) => {
+    const [slide, setSlide] = useState(0);
+    console.log(data)
+    const nextSlide = () => {
+        setSlide(slide === data.length - 1 ? 0 : slide + 1);
+    };
+
+    const prevSlide = () => {
+        setSlide(slide === 0 ? data.length - 1 : slide - 1);
     };
 
     return (
-        <div className="container">
-            <Carousel
-                className="caroseul"
-                arrows
-                infinite
-                responsive={responsive}
-                showDots
-                sliderClass=""
-                slidesToSlide={1}
-                renderDotsOutside
-            >
-                {type ? (
-                    list.map(image =>
-                        <img src={image}></img>
+        <div className="carousel">
+            <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
+            {type ? (
+                data.map((item, id) => {
+                    return (
+                        <img
+                            src={item.src}
+                            alt={item.alt}
+                            key={id}
+                            className={slide === id ? "slide" : "slide slide-hidden"}
+                        />
                     )
+                })
+            ) : (
+                data.map(
+                    (service, id) =>
+                        <ServiceCard
+                            descricao={service.descricao}
+                            nome={data.nome}
+                            key={id}
+                            className={slide === id ? "slide" : "slide slide-hidden"}
+                        >
+                        </ServiceCard>
                 )
-                    :
-                    (list.map(
-                        service =>
-                            <ServiceCaroseul
-                                descricao={service.descricao}
-                                nome={list.nome}
+            )
 
-                            ></ServiceCaroseul>
-                    )
-                    )}
-            </Carousel>
+
+            }
+            <BsArrowRightCircleFill
+                onClick={nextSlide}
+                className="arrow arrow-right"
+            />
+            <span className="indicators">
+                {data.map((_, id) => {
+                    return (
+                        <button
+                            key={id}
+                            className={
+                                slide === id ? "indicator" : "indicator indicator-inactive"
+                            }
+                            onClick={() => setSlide(id)}
+                        ></button>
+                    );
+                })}
+            </span>
         </div>
-    )
-}
+    );
+};
 
 export default CarouselComponent

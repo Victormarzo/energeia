@@ -1,4 +1,10 @@
-.container{
-    background-color: aquamarine;
-    
+.service-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin-bottom: 50px;
 }
