@@ -2,6 +2,10 @@
     height: 350px;
     width: 350px;
     
+    
+}
+.servico :hover{
+    cursor: pointer;
 }
 
 .icone{
