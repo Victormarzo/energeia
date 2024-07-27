@@ -1,5 +1,4 @@
 import Title from "../../components/Title";
-import Logo from "../../components/Logo"
 import { MdOutlineEmail } from "react-icons/md";
 import { SiWhatsapp, SiFacebook } from "react-icons/si";
 import "./contact.css"
@@ -10,7 +9,7 @@ const Contact = () => {
         <div className="contact-section">
             <Title>CONTATO</Title>
             <div className="icon">
-                <a href="victor.marzo.monteiro@gmail.com">
+                <a href="mailto:victor.marzo.monteiro@gmail.com">
                     <MdOutlineEmail size={"25px"} />
                 </a>
                 <p>victor.marzo.monteiro@gmail.com</p>
