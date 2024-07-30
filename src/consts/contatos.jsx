@@ -19,4 +19,4 @@ const contatos = [
         link: "https://instagram.com"
     }
 ]
-export default contatos
+export default contatos;
