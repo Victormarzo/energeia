@@ -1,6 +1,7 @@
 import Banner from "../../sections/Banner"
 import Contact from "../../sections/Contact"
 import ServiceSection from "../../sections/ServiceSection"
+import Projects from "../../sections/Projects"
 import "./home.css"
 
 
@@ -10,6 +11,7 @@ const Home = ()=>{
             <Banner/>
             <ServiceSection/>
             <Contact/>
+            <Projects/>
         </>
 
     )

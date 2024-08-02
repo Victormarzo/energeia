@@ -1,5 +1,5 @@
 const projetos = [
-    1 = [{
+    [{
         nome: "Embratel",
         img: "",
         descricao: "Curitiba-PR, Florianópolis-SC e Porto Alegre-RS",
@@ -56,7 +56,7 @@ const projetos = [
         cargo: "Engenheiro Eletricista - Diretor Industrial"
     }
     ],
-    2 = [
+    [
         {
             nome: "A.J. RORATO",
             img: "",
@@ -88,7 +88,7 @@ const projetos = [
             descricao: "Execução e Certificaçãpo dos Projetos elétricos, Coordenação na Compra, Testes em Fábrica , Condicionamento, execução e comissionamento dos seguintes sistemas: Telecomunicação, CFTV, Det. Al. de Incêndio, Automação, Elétrica (Alimentação 13,8kV, Distribuição principal 480Vca, Força 220/127Vca, CA confiável 208/120Vca, CC confiável 125Vcc, Aterramento, SPDA, Iluminação, SCMD (automação de todo o sistema elétrico, configuração dos IED's, Rede IEC-61850 e Profibus-DP)), Hidráulica, Esgoto sanitario, Combate a Incêndio, Drenagem e Águas Pluviais"
         }
     ],
-    3 = [
+    [
         {
             nome: "Tribunal Regional do Trabalho - TRT/PR",
             img: "",
@@ -157,7 +157,7 @@ const projetos = [
         
 
     ],
-    4=[
+    [
         {
             nome:"Flex Condomínios",
             img:""

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import  "./caroseul-component.css";
+import "./caroseul-component.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-
-
 import ServiceCard from "../ServiceCard";
+import ProjectCard from "../ProjectCard";
 
-const CarouselComponent = ({ data,type }) => {
+const CarouselComponent = ({ data, type }) => {
     const [slide, setSlide] = useState(0);
     console.log(data)
     const nextSlide = () => {
@@ -15,11 +14,14 @@ const CarouselComponent = ({ data,type }) => {
     const prevSlide = () => {
         setSlide(slide === 0 ? data.length - 1 : slide - 1);
     };
+    let newType
+    type === "project"?( newType = "carousel project"):( newType = "carousel")
 
+    console.log(2,data,type)
     return (
-        <div className="carousel">
+        <div className={newType}>
             <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
-            {type ? (
+            {type ? (type == "photo" ? (
                 data.map((item, id) => {
                     return (
                         <img
@@ -31,6 +33,16 @@ const CarouselComponent = ({ data,type }) => {
                     )
                 })
             ) : (
+                data.map(
+                    (service, id) =>
+                        <ProjectCard
+                            descricao={service.descricao}
+                            nome={service.nome}
+                            key={id}
+                            className={slide === id ? "slide project" : "slide slide-hidden"}
+                        >
+                        </ProjectCard>
+                ))) : (
                 data.map(
                     (service, id) =>
                         <ServiceCard

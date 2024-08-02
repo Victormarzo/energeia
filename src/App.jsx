@@ -1,5 +1,4 @@
-import Carousel from 'react-multi-carousel';
-import CarouselComponent from './components/CaroseulComponent'
+
 import './App.css'
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';

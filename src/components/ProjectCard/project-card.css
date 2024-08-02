@@ -1,0 +1,12 @@
+.project{
+    width: 450px;
+    min-height: 550px;
+    margin: 0 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: aqua;
+}
+
+.title{
+    font-size: 30px;
+}
