@@ -9,19 +9,30 @@ import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "../../components/ProjectCard";
 
 const Projects = () => {
-    console.log(projetos)
+    console.log(projetos.length)
     //<CarouselComponent  type={"project"} data={projetos[1]}/>
     const settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 1
       };
     return (
         <div className="projetos">
             <Title className="title">PROJETOS</Title>
             <div className="slider-container">
+            <Slider {...settings}>
+                {projetos[0].map(
+                    (service, id) =>
+                        <ProjectCard
+                            descricao={service.descricao}
+                            nome={service.nome}
+                            key={id}
+                            img={service.img}
+                        >
+                        </ProjectCard>
+                )}
+            </Slider>
             <Slider {...settings}>
                 {projetos[1].map(
                     (service, id) =>
@@ -29,6 +40,31 @@ const Projects = () => {
                             descricao={service.descricao}
                             nome={service.nome}
                             key={id}
+                            img={service.img}
+                        >
+                        </ProjectCard>
+                )}
+            </Slider>
+            <Slider {...settings}>
+                {projetos[2].map(
+                    (service, id) =>
+                        <ProjectCard
+                            descricao={service.descricao}
+                            nome={service.nome}
+                            key={id}
+                            img={service.img}
+                        >
+                        </ProjectCard>
+                )}
+            </Slider>
+            <Slider {...settings}>
+                {projetos[3].map(
+                    (service, id) =>
+                        <ProjectCard
+                            descricao={service.descricao}
+                            nome={service.nome}
+                            key={id}
+                            img={service.img}
                         >
                         </ProjectCard>
                 )}
