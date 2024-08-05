@@ -118,12 +118,12 @@ const projetos = [
         },
         {
             nome: "Petrobras",
-            img: "images/empresas/petrobras.png",
+            img: "images/empresas/petrobras2.png",
             descricao: "Acompanhamento e Testes de máquinas de VAC Petrobras Repar. Consórcio INTERPAR. Araucária-PR"
         },
         {
             nome: "Petrobras",
-            img: "images/empresas/petrobras.png",
+            img: "images/empresas/petrobras2.png",
             descricao: "Inspeção de Painéis Elétricos para a Petrobras Compartilhado RNNE/SI/SOM Ediba Conjunto, Pituba. Salvador-BA"
 
         },
@@ -135,7 +135,7 @@ const projetos = [
         },
         {
             nome: "COPLAC-Companhia de Planejamento Acústico",
-            img: "images/empresas/coplac.png",
+            img: "images/empresas/coplac2.jpeg",
             descricao: "Projeto Elétrico da entrada de energia em MT, distribuição MT, transformação e distribuição em BT."
 
         },
