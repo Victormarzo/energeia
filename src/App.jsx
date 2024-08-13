@@ -27,13 +27,15 @@ function App() {
     "/images/image13.jpg",
     "/images/image14.jpg"
   ]
-
+//<Sidebar />
   //<CarouselComponent list={servicos[1]} />
   //<CarouselComponent type={'image'} list={images}/>
 
   return (
     <div className='app'>
+      
       <div className='content'>
+        
         <Router>
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -41,7 +43,7 @@ function App() {
           </Routes>
         </Router>
       </div >
-      <Sidebar />
+      
     </div>
   )
 }

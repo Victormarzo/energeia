@@ -10,7 +10,7 @@ const Sidebar = () => {
         {nome:"Manutenção e adequação",link:"/manutencao"}]
     return (
         <ul className='sidebar'>
-            <Logo></Logo>
+            <Logo/>
             {options.map(option =>
                 <div className='option' key={option.nome}>
                     <a href={option.link}>

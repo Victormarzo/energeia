@@ -71,9 +71,9 @@ const projetos = [
             descricao: "Projeto e Execução elétrica, rede LAN, civil(divisórias), hidráulico - para implantação do Banco Postal nos Correiso (aproximadamente 100 agências)"
         },
         {
-            nome: "PNUD - Programa das Nações Unidas para o Desenvolvimento Governo do Estado do Paraná",
+            nome: "PNUD",
             cargo: "Coordenador do Projeto Paraná Digital - Consultor Especializado em Eng. Elétrica",
-            descricao: "Supervisão e validação dos Laudos de Avaliação Técnica de conferência local apresentados e acompanhamento da implantação de projetos de reforço elétrico, de lógica, de proteção por alarme e de SPDA de 540 prédios escolares e/ ou unidades adminstrativas descentralizadas da Secretaria de Estado  de Educação Do Paraná   ",
+            descricao: "Programa das Nações Unidas para o Desenvolvimento Governo do Estado do Paraná Supervisão e validação dos Laudos de Avaliação Técnica de conferência local apresentados e acompanhamento da implantação de projetos de reforço elétrico, de lógica, de proteção por alarme e de SPDA de 540 prédios escolares e/ ou unidades adminstrativas descentralizadas da Secretaria de Estado  de Educação Do Paraná   ",
             img: "images/empresas/parana.png"
         },
         {
@@ -160,15 +160,15 @@ const projetos = [
         },
         {
             nome: "Batel Administradora de Condomínios",
-            img: "images/empresas/batel.png"
+            img: "images/empresas/batel4.png"
         },
         {
             nome: "Evidência Gestão de Condomínios",
-            img: "images/empresas/evidencia.png"
+            img: "images/empresas/evidencia3.png"
         },
         {
             nome: "Síndiconet",
-            img: "images/empresas/sindiconet.png"
+            img: "images/empresas/sindiconet.svg"
         },
         {
             nome: "Administradora Lima",
@@ -180,7 +180,7 @@ const projetos = [
         },
         {
             nome: "Administração de Condomínios Curitiba-BR",
-            img: "images/empresas/brcondos.png"
+            img: "images/empresas/brcondos2.png"
         },
         {
             nome: "Completa Administradora de Condomínios",

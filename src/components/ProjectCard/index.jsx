@@ -1,18 +1,32 @@
+import { useState } from "react"
 import "./project-card.css"
 
-const ProjectCard = ({ img, descricao, nome}) => {
-   console.log(img, descricao, nome)
+const ProjectCard = ({ img, descricao, nome }) => {
+    const [show, setShow] = useState(false)
+
+
     return (
-        <div className="project">
-            
-            <img src={img}></img>
-            <p className="project-title">
-                {nome}
-            </p>
-            <p>
-                {descricao}
-            </p>
-        </div>
+        show && descricao ? (
+            <div className="project show" onClick={() => setShow(!show)}>
+                <img src={img}></img>
+                
+                <h2 className="project-title">
+                    {nome}
+                </h2>
+                <div className="project-description">
+                    <p>
+                    {descricao}
+                    </p>
+                   
+                </div>
+            </div>) : (
+            <div className="project" onClick={() => setShow(!show)}>
+                <img src={img}></img>
+                <h2 className="project-title">
+                    {nome}
+
+                </h2>
+            </div>)
 
     )
 }

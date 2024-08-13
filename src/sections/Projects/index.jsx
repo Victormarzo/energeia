@@ -9,19 +9,17 @@ import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "../../components/ProjectCard";
 
 const Projects = () => {
-    console.log(projetos.length)
-    //<CarouselComponent  type={"project"} data={projetos[1]}/>
     const settings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       };
     return (
         <div className="projetos">
             <Title className="title">PROJETOS</Title>
             <div className="slider-container">
-            <Slider {...settings}>
+            <Slider className="project1"{...settings}>
                 {projetos[0].map(
                     (service, id) =>
                         <ProjectCard

@@ -1,11 +1,4 @@
 .app{
-  width:100vw;
-  position: relative;
-  box-sizing: border-box;
-
+    box-sizing: border-box;
 }
 
-.content{
-  width: 80vw;
-  
-}
